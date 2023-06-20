@@ -1,0 +1,254 @@
+.skills {
+    margin-top: 50px;
+    &__title {
+        font-weight: 600;
+        font-size: 42px;
+        line-height: 63px;
+        letter-spacing: 0.05em;
+        text-transform: capitalize;
+        
+        margin-bottom: 24px;
+        @include mqUP (1024px) {
+            font-size: 56px;
+            line-height: 85px;
+            margin-bottom: 38px; 
+        }
+    }
+    &__title::before {
+        content:'';
+        position: absolute;
+        border-bottom: 1.5px solid var(--white);
+        width: 130px;
+        @include mqUP (1024px) {
+            width: 174px;
+        }
+    }
+}
+.circular {
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: capitalize;
+    
+    &-box {
+        display: flex;
+        column-gap: 40px;
+          
+        @include mqUP (1024px) {
+            @include flexbox (space-between, center);
+        }
+    }
+          
+    &item {
+        position: relative;
+        @include flexbox (center, center);
+        min-width: 96px;
+        height: 96px;
+          
+        border-radius: 50%;
+        
+        @include mqUP (1024px) {
+            min-width: 280px;
+            height: 280px;
+        }
+          
+        &::before {
+            content: "";
+            position: absolute;
+            width: 74px;
+            height: 74px;
+            border-radius: 50%;
+            background-color: var(--dark);
+            z-index: 0;
+          
+            @include mqUP (1024px) {
+              width: 218px;
+              height: 218px;
+            }
+        }
+          
+        &#progress1 {
+            background: conic-gradient(#3c1dff, #15b9b9 288deg, #1f1f1f 0%);
+        }          
+        &#progress2 {
+            background: conic-gradient(#3c1dff, #15b9b9 345deg, #1f1f1f 0%);
+        }  
+        &#progress3 {
+            background: conic-gradient(#3c1dff, #15b9b9 288deg, #1f1f1f 0%);
+        }
+        &#progress4 {
+            background: conic-gradient(#3c1dff, #15b9b9 345deg, #1f1f1f 0%);
+        }
+    }
+          
+    &item .progress-value {
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        text-transform: capitalize;
+        font-size: 19px;
+        line-height: 29px;
+        z-index: 1;
+        @include mqUP (1024px) {
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: capitalize;
+            font-size: 56px;
+            line-height: 85px;
+        }  
+    }
+          
+    &item .text {
+        position: absolute;
+        top: 110px;
+
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        text-transform: capitalize;
+        font-size: 7px;
+        line-height: 11px;
+          
+        @include mqUP (1024px) {
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: capitalize;
+            font-size: 20px;
+            line-height: 31px;
+            top: 320px;
+        }
+    }
+}
+
+.education {
+    margin-top: 81px;
+    @include flexbox (start, start, column);
+    @include mqUP (1024px) {
+        margin-top: 198px;
+        @include flexbox (space-between, start, row);
+        gap: 30px;
+    }
+}
+
+.language {
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: capitalize;
+    color: var(--white);
+    &__title {
+        font-size: 23px;
+        line-height: 34px;
+        border-bottom: 1px solid var(--white) ;
+        width: 189px;
+        margin-bottom: 29px;
+        @include mqUP (1024px) {
+            font-size: 56px;
+            line-height: 85px;
+            width: 478px;
+            margin-bottom: 34px;
+        }
+    }
+    &__item:last-child {
+        margin-top: 16px;
+        @include mqUP (1024px) {
+            margin-top: 26px;
+        }
+    }
+    &__item-title {
+        font-size: 18px;
+        line-height: 27px;
+        @include mqUP (1024px) {
+            font-size: 30px;
+            line-height: 44px;
+        }
+    }
+    &__item-text {
+        font-size: 8px;
+        line-height: 13px;
+        text-align: right;
+        @include mqUP (1024px) {
+            font-size: 14px;
+            line-height: 22px;
+            margin-bottom: 3px;
+        }
+    }
+    &__item-line {
+        width: 300px;
+        height: 15px;
+        background: linear-gradient(90deg, #3C1DFF 18.63%, #14C9C9 78.88%);
+        border-radius: 31px;
+        @include mqUP (1024px) {
+            width: 100%;
+            height: 24px;
+            border-radius: 50px;
+        }
+    }
+}
+
+.studies {
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: capitalize;
+    color: var(--white);
+    &__title {
+        font-size: 17px;
+        line-height: 25px;
+        border-bottom: 1px solid var(--white) ;
+        
+        width: 144px;
+
+        margin-top: 51px;
+        margin-bottom: 21px;
+        @include mqUP (1024px) {
+            font-size: 56px;
+            line-height: 85px;
+            
+            width: 478px;
+
+            margin-top: 0; 
+            margin-bottom: 27px;
+        }
+    }
+    &__item {
+        @include flexbox (flex-start, center){
+            gap: 20px;
+
+        }
+    }   
+
+    &__item:last-child {
+        margin-top: 14px;
+        @include mqUP (1024px){
+            margin-top: 25px;
+        }
+    }
+    .frame {
+        padding: 19px;
+        background: linear-gradient(180deg, #15B9B9 0%, #3C1DFF 100%);
+        border-radius: 50%;
+        width: 14px;
+        height: 15px;
+        @include mqUP (1024px) {
+            padding: 34px;
+            width: 25px;
+            height: 28px;
+        }
+    }
+    .univer-name {
+        font-size: 16px;
+        line-height: 24px;
+        @include mqUP (1024px) {
+            font-size: 30px;
+            line-height: 44px;
+        }
+    }
+    .univer-year {
+        font-weight: 300;
+        font-size: 10px;
+        line-height: 15px;
+        
+        color: #E3E1E1;
+        @include mqUP (1024px) {
+            font-size: 18px;
+            line-height: 27px;
+        }
+    }
+
+}

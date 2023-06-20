@@ -1,0 +1,25 @@
+:root {
+    --white: #fff;
+    --dark: #1f1f1f;
+    --grey: #5A6C6C;
+    --gradient-blue: linear-gradient(180deg, #15B9B9 0%, #3C1DFF 100%);
+}
+
+* {
+    font-family: "Poppins", sans-serif;
+    color: var(--white);
+}
+
+.general-bg {
+    background-color: $dark;
+}
+
+.container {
+    margin: 0 31px;
+}
+
+.container {
+    @include mqUP (1024px) {
+    margin: 0 114px;
+    }
+}

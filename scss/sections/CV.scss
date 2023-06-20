@@ -1,0 +1,60 @@
+.CV {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 68px;
+
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: capitalize;
+    @include mqUP (1024px) {
+        margin-top: 180px;
+        margin-bottom: 194px;
+    }
+
+    &__title { 
+        font-size: 31px;
+        line-height: 46px;
+        @include mqUP (1024px) {
+            font-size: 57px;
+            line-height: 85px;
+        }
+    }
+    &__text {
+        margin-top: 9px;
+
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 15px;
+        color: #9E9E9E;
+        @include mqUP (1024px) {
+            margin-top: 0px;
+            font-size: 19px;
+            line-height: 29px;
+        }
+    }
+
+    &__button {
+        margin-top: 14px;
+
+        display: inline-block;
+        text-decoration: none;
+        padding: 12px 41px;
+
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 26px;
+
+        background-image: $gradient-blue;
+        border-radius: 7px;
+        @include mqUP (1024px) {
+            margin-top: 25px;
+
+            padding: 25px 78px;
+
+            font-size: 25px;
+            line-height: 38px;
+
+            border-radius: 10px;
+        }
+    }
+}

@@ -1,0 +1,95 @@
+.hero {
+   @include flexbox (start, center, column-reverse) {
+       position: relative;
+   }
+
+    &__content {
+        text-align: center;
+    }
+    &__subtitle {
+        margin-top: 33px;
+
+        font-weight: 300;
+        font-size: 17px;
+        line-height: 26px;
+        letter-spacing: 0.36em;
+        text-transform: uppercase;
+    }
+    &__title {
+        margin-top: 10px;
+
+        font-weight: 600;
+        font-size: 33px;
+        line-height: 50px;
+    }
+    &__positions {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 21px;
+        letter-spacing: 0.015em;
+        text-transform: uppercase;
+    }
+    &__button {
+        margin-top: 33px;
+
+        display: inline-block;
+        text-decoration: none;
+        padding: 12px 32px;
+
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 26px;
+        letter-spacing: 0.05em;
+        text-transform: capitalize;        
+
+        background-image: var(--gradient-blue);
+        border-radius: 7px;
+    }
+    &__pic {
+        position: relative;
+        background: none;
+        top: 0;
+        width: 100%;
+    }
+
+    // @media screen and (min-width: 1024px) {
+    @include mqUP (1024px){
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+
+        &__content {
+            text-align: start;
+            width: 315px;
+            margin: 200px 0 30px 20px;
+        }
+        &__subtitle {
+            margin-top: 0;
+            font-size: 25px;
+            line-height: 38px;
+        }
+        &__title {
+            margin-top: 0;
+            font-size: 67px;
+            line-height: 101px;        
+        }
+        &__positions {
+            font-size: 20px;
+            line-height: 30px;
+        }
+        &__button {
+            margin-top: 35px;
+            padding: 17px 46px;
+            font-weight: 400;
+            font-size: 25px;
+            line-height: 38px;
+            border-radius: 10px;
+        }
+        &__pic {
+            top: -30px;
+            right: 40px;
+            height: 100%;
+        }
+    }
+}
